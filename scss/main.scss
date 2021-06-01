@@ -1,0 +1,39 @@
+@import "_functions";
+@import "_variables";
+@import "_mixin";
+
+
+body {
+    color:$bodyBG;
+    background:$textCL;
+    font-weight: weight(regular);
+    text-align:center;
+}
+.main {
+    @include container(row);
+    padding:.3rem;
+    align-items:flex-start;
+}
+.col {
+    flex-basis: column-width(1, 4);
+    margin: 0 1rem;
+    text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: weight(bold);
+}
+h1, h2, h3 {
+    text-align:center;
+}
+a {
+    background:$bodyBG;
+    color:$textCL;
+}
+.light {
+    @include theme($dark-theme: false);
+}
+@include mobile{
+    .main {
+        flex-direction:column;
+    }
+}

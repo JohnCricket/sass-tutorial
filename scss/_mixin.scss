@@ -1,0 +1,20 @@
+@mixin container($dir) {
+    display:flex;
+    flex-flow:$dir nowrap;
+    justify-content:space-evenly;
+    align-items:center;
+    margin-top:3rem;
+}
+
+@mixin theme($dark-theme: true) {
+    @if($dark-theme) {
+        background: lighten($bodyBG, 100%);
+        color: darken($textCL, 100%);
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}

@@ -1,0 +1,9 @@
+@function align($arg) {
+    @return $arg;
+    }
+@function column-width($col, $total) {  
+    @return percentage($col/$total);  
+   }
+@function weight($weight-name) {
+    @return map-get($font-weight, $weight-name);
+}

@@ -1,0 +1,41 @@
+body {
+  color: #FFF;
+  background: #191818;
+  font-weight: 400;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 0.3rem;
+  align-items: flex-start;
+}
+
+.col {
+  flex-basis: 25%;
+  margin: 0 1rem;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+a {
+  background: #FFF;
+  color: #191818;
+}
+
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
+}
